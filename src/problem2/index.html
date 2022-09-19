@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fancy Form</title>
+
+    <!-- You may add more stuff here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
+    <div class="container mt-5 mb-5">
+      <h1>Transaction</h1>
+      <form class="row g-3" id="form">
+        <div class="col-md-6">
+          <label for="input-address" class="form-label">ETH Address</label>
+          <input class="form-control" id="input-address" type="text" placeholder="something like 0xc1912fee45d61c87cc5ea59dae31190fffff232d" required/>
+        </div>
+        <div class="col-md-6">
+          <label for="input-amount" class="form-label">Amount to send</label>
+          <input class="form-control" id="input-amount" type="number" placeholder="valid numbers only" required/>
+        </div>
+        <div class="col-md-12">
+          <label for="input-otp" class="form-label">OTP Authentication</label>
+        <input type="number" class="form-control" id="input-otp" required />
+        </div>
+        <div class="col-md-12 mt-3">
+          <button type="submit" class="btn btn-primary">Send Tokens</button>
+        </div>
+      </form>
+      <div class="alert alert-danger" id="error-message" role="alert"></div>
+      <div role="alert" id="success-message"></div>
+    </div>
+    
+    <!-- <div id="error-message"></div> -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"
+    ></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
