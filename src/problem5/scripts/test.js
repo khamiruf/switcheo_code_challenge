@@ -1,9 +1,7 @@
 const { ethers } = require("ethers");
-
-const ADDR = "…";   // your contract address
-const ABI = [
-
-];    // your contract ABI
+const contract = require("../artifacts/contracts/SmartestContract.sol/SmartestContract.json")
+const ADDR = "0x47755f773BA6f3Fd5B5a46486C7933BdBE185fb5";   // your contract address
+const ABI = contract.abi; // your contract ABI
 
 const ADDRESS = "…"; // some wallet address with token balance
 const TOKENS = [    // token contract addresses
