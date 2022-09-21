@@ -1,28 +1,23 @@
 var sum_to_n_a = function(n) {
     let sum = 0;
-    let length = n.length;
-    for (var x=0; x < length; x++) {
-        sum += n[x];
+    for (var x=1; x <= n; x++) {
+        sum += x;
     }
     return sum;
 };
 
 var sum_to_n_b = function(n) {
     // your code here
-    let sum = 0;
-    n.forEach((num)=> {
-        sum += num;
-    });
+    var res = (n * (n+1)) / 2;
 
-    return sum;
+    return res;
 };
 
 var sum_to_n_c = function(n) {
     // your code here
-    let sum = 0;
-    for (let x of n) {
-        sum += x;
+    if (n <= 1) {
+        return n;
     }
-
-    return sum;
+    return n + sum_to_n_c(n-1);
 };
+
